@@ -1,28 +1,19 @@
 <?php
-session_start();
-include('conexao.php');
 
-if(empty($_POST['nome']) || empty($_POST['senha'])) {
-    header('Location: index.php');
-    exit();
-}
+$emailSistema = $_POST['email'];
+$senhaSistema = $_POST['senha'];
 
-$nome = mysqli_real_escape_string($conexao, $_POST['nome']);
-$senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+echo "{$emailSistema} - {$senhaSistema}";
 
-$query = "SELECT usuario_id, nome FROM tb_usuario WHERE nome = '{$nome}' AND senha = 
-md5('{$senha}')"; 
+include "include/conexao.php";
 
-$result = mysqli_query($conexao, $query);
+$sqlBusca = "SELECT * FROM tb_cliente WHERE email = '{$emailSistema}' and senha = '{$senhaSistema}'";
 
-$row = mysqli_num_rows($result);
+$result = mysqli_query($conexao , $sqlBusca);
 
-if($row == 1) {
-    $_SESSION['nome'] = $nome;
-    header('Location: cliente.php');
-    exit();
-} else {
-    header('Location: index.php');
-    exit();
+if(mysqli_num_rows($result) > 0){
+   header('Location: agenda/pagina-clientes.php');
+}else{
+   header('Location: index.php');
 }
 ?>
