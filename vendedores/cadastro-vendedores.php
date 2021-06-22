@@ -1,6 +1,6 @@
 <?php 
 
-include "include/conexao.php";
+include "../include/conexao.php";
 
 //error_reporting(0);
 
@@ -18,7 +18,7 @@ if (isset($_POST['submit'])) {
     $csenha = $_POST['csenha'];
 
     if ($senha == $csenha) {
-        $sqlBusca = "INSERT INTO tb_clientes (nome, email, telefone, senha)
+        $sqlBusca = "INSERT INTO tb_vendedores (nome, email, telefone, senha)
             VALUES(
                 '{$nome}', 
                 '{$email}', 
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
                 );";
         $result = mysqli_query($conexao, $sqlBusca);
         if ($result) {
-            header('Location:index.php');
+            header('Location:login-vendedores.php');
             echo "<script>alert('Usuario registrado sucesso!')</script>";  
             $nome = "";
             $email = "";
@@ -66,36 +66,37 @@ if (isset($_POST['submit'])) {
 <body>
     <div class="container text-center text-align mt-3">
         <form style="max-width:550px; margin:auto;" method= "post">
-        <svg xmlns="http://www.w3.org/2000/svg" width="116" height="116" fill="currentColor" class="bi bi-person" 
+        <svg xmlns="http://www.w3.org/2000/svg" width="116" height="116" fill="currentColor" class="bi bi-person-lines-fill" 
         viewBox="0 0 16 16">
-        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 
-        6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 
-        1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+        <path d="M6 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5 6s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zM11 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 
+        1h-4a.5.5 0 0 1-.5-.5zm.5 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4zm2 3a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2zm0 3a.5.5 0 0 0 0 
+        1h2a.5.5 0 0 0 0-1h-2z"/>
         </svg>
-            <h3 class="text-info">Preencha seu cadastro:</h3> 
+        
+            <h3 class="text-warning">Cadastro de vendedor:</h3> 
             <div class="mb-3 row">
-                <label for="Nome" class="col-sm-2 col-form-label text-info fw-bold">Nome:</label>
+                <label for="Nome" class="col-sm-2 col-form-label text-warning fw-bold">Nome:</label>
                 <div class="col-sm-10">                    
                 <input type="text" name="nome" class="form-control" value="<?php echo $nome; ?>" placeholder="Digite seu nome" 
                 id="nome" require>
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="loginEmail" class="col-sm-2 col-form-label text-info fw-bold">Email:</label>
+                <label for="loginEmail" class="col-sm-2 col-form-label text-warning fw-bold">Email:</label>
                 <div class="col-sm-10">                    
                 <input type="text" name="email" class="form-control" value="<?php echo $email; ?>" id="email" placeholder="Digite seu e-mail" 
                 require>
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="loginTelefone" class="col-sm-2 col-form-label text-info fw-bold">Telefone:</label>
+                <label for="loginTelefone" class="col-sm-2 col-form-label text-warning fw-bold">Telefone:</label>
                 <div class="col-sm-10">                    
                 <input type="text" name="telefone" class="form-control" value="<?php echo $telefone; ?>" id="telefone" placeholder="( ) Seu-telefone" 
                 require>
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-2 col-form-label text-info fw-bold">Senha:</label>
+                <label for="inputPassword" class="col-sm-2 col-form-label text-warning fw-bold">Senha:</label>
                 <div class="col-sm-10">
                 <input type="password" name="senha" class="form-control" value="<?php echo $senha; ?>" placeholder="Digite sua senha" 
                 id="inputPassword" 
@@ -103,7 +104,7 @@ if (isset($_POST['submit'])) {
                 </div>
             </div>
             <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-2 col-form-label text-info fw-bold">Confirme a senha:
+                <label for="inputPassword" class="col-sm-2 col-form-label text-warning fw-bold">Confirme a senha:
                 </label>
                 <div class="col-sm-10">
                 <input type="password" name="csenha" class="form-control" value="<?php echo $csenha; ?>" 
@@ -114,7 +115,7 @@ if (isset($_POST['submit'])) {
             <div class="text-center">
                 <label>
                     <p class="login-register-text">Já tem conta? Faça
-                    <a href="index.php" class="text-decoration-none text-info">login</a> agora!</p>
+                    <a href="login-vendedores.php" class="text-decoration-none text-warning">login</a> agora!</p>
                 </label>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
@@ -122,9 +123,6 @@ if (isset($_POST['submit'])) {
             </div>
         </form>
     </div>
-    <?php
-    error_reporting(0);
-    ?>
     <footer class="fixed-bottom text-center">  
         &copy; Todos os direitos reservados
     </footer>

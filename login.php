@@ -7,12 +7,12 @@ echo "{$emailSistema} - {$senhaSistema}";
 
 include "include/conexao.php";
 
-$sqlBusca = "SELECT * FROM tb_cliente WHERE email = '{$emailSistema}' and senha = '{$senhaSistema}'";
+$sqlBusca = "SELECT * FROM tb_clientes WHERE email = '{$emailSistema}' and senha = '{$senhaSistema}'";
 
 $result = mysqli_query($conexao , $sqlBusca);
 
 if(mysqli_num_rows($result) > 0){
-   header('Location: agenda/pagina-clientes.php');
+   header('Location: clientes/pagina-clientes.php');
 }else{
    header('Location: index.php');
 }

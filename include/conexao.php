@@ -2,7 +2,7 @@
 $servidor = "localhost";
 $usuario = "root";
 $senha = "";
-$banco = "bd_vendas";
+$banco = "bd_projeto";
 
 $conexao = mysqli_connect($servidor, $usuario, $senha, $banco);
 
