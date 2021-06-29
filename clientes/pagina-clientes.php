@@ -12,7 +12,6 @@
 
 </head>
 <body>
-  
     <nav class="navbar navbar-expand-lg navbar-dark bg-info">
         <div class="container-fluid">
           <nav class="navbar navbar-dark bg-info">
@@ -35,45 +34,48 @@
           </div>
         </div>   
       </nav>
+
+      <?php 
+include "../include/conexao.php" ;
+$sqlBusca = "SELECT * FROM tb_itens";
+                
+
+$listaDeItens = mysqli_query($conexao , $sqlBusca);
+?>
+
       <form>
-      <div class="row row-cols-1 row-cols-md-2 g-4">
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-</div>
+      <?php 
+
+      while($itens = mysqli_fetch_assoc($listaDeItens)){
+      echo "<div class='card-group'>";
+        echo "<div class='card'>";
+          echo "<div class='col-md-12'>";
+            echo "<img src='{$itens['imgProduto']}' class='img-fluid rounded-start' alt='...'>";
+          echo "</div'>";
+          echo "<div class='col-md-8'>";
+            echo "<div class='card-body'>";
+              echo "<h5 class='card-title'>{$itens['nome']}</h5>";
+              echo "<p class='card-text'>{$itens['campInform']}</p>";
+              echo "<p class='card-text'><small class='text-muted'>Last updated 3 mins ago</small></p>";
+            echo "</div>";
+            echo "</div>";
+          echo "</div>";
+        echo "</div>";
+      };
+      ?>
+
+      <!--
+          <div class="col">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
         <div class="card-body">
             <h5 class="card-title">SITE EM CONSTRUÇÃO</h5>
             <p class="card-text">Peço sua colaboração, entraremos em contato assim que retornar. Equipe SEA Agradece!</p>
@@ -84,5 +86,6 @@
         </div>
         </div>
       </form>
+      -->
 </body>
 </html>
