@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
                 );";
         $result = mysqli_query($conexao, $sqlBusca);
         if ($result) {
-            header('Location:index.php');
+            header('Location:clientes/login-interno-clientes.php');
             echo "<script>alert('Usuario registrado sucesso!')</script>";  
             $nome = "";
             $email = "";

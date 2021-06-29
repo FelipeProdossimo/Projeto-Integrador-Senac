@@ -14,6 +14,6 @@ $result = mysqli_query($conexao , $sqlBusca);
 if(mysqli_num_rows($result) > 0){
    header('Location: clientes/pagina-clientes.php');
 }else{
-   header('Location: index.php');
+   header('Location: clientes/login-interno-clientes.php');
 }
 ?>

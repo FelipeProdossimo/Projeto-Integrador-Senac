@@ -1,74 +1,51 @@
-<?php
-
-
-$emailSistema = "";
-$senhaSistema = "";
-
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seach Company</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Search Company - HOME</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <style>
-    
+        body {
+  font: 1rem/1.5 var(--bs-font-sans-serif);
+}
     </style>
 </head>
-
 <body>
-    <div class="container text-center text-align mt-5 ">
-        <form style="max-width:500px; margin:auto;" name="formulario-login" action="login.php" method="post">
-        <svg xmlns="http://www.w3.org/2000/svg" width="116" height="116" fill="currentColor" class="bi bi-person" 
-        viewBox="0 0 16 16">
-        <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 
-        6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 
-        1.332-.678.678-.83 1.418-.832 1.664h10z"/>
-        </svg>
-            <h3 class="text-info">Faça seu login:</h3>  
-            <div class="mb-3 row">
-                <label for="loginEmail" class="col-sm-2 col-form-label text-info fw-bold">Email:</label>
-                <div class="col-sm-10">                    
-                <input type="text" value="<?php echo $emailSistema ?>" name="email" class="form-control" id="email" placeholder="Seu e-mail" require>
-                </div>
-            </div>
-            <div class="mb-3 row">
-                <label for="inputPassword" class="col-sm-2 col-form-label text-info fw-bold">Senha:</label>
-                <div class="col-sm-10">
-                <input type="password" value="<?php echo $senhaSistema ?>" name="senha" class="form-control" 
-                placeholder="Sua senha" id="inputPassword" require>
-                </div>
-            </div>
-            <div class="text-center">
-                <label>
-                    <p class="login-register-text">Não tem conta?
-                    <a href="cadastro.php" class="text-decoration-none text-info">Registra-se</a> 
-                    agora!</p>
-                </label>
-            </div>
-            <div class="d-grid gap-2 col-6 mx-auto">
-            <button class="btn btn-primary" name="submit" type="submit">Entrar</button>
-            </div>
-            <?php 
-            if(isset($_GET['mensagem'])){
-                if($_GET['mensagem'] == 'errado'){
-                    echo "<script>alert('Opss! Email ou senha incorretos.')</script>";
-                }
-            }
-            ?>
-        </form>
-    </div>
-    <footer class="fixed-bottom text-center">  
-        &copy; Todos os direitos reservados
-    </footer>
-    </main>
-    <script src="bootstrap/js/bootstrap.bundle.js"></script>
-    <script src="js/jquery.min.js"></script>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" 
+    aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="index.php" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" 
+          aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="sobre.php">SOBRE NÓS</a></li>
+            <li><a class="dropdown-item" href="contato.php">CONTATO</a></li>
+            <li><a class="dropdown-item" href=""></a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
+integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
+integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 </body>
 </html>

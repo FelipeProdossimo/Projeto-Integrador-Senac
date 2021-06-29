@@ -22,19 +22,19 @@
               </a>
             </div>
           </nav>
-            <button type="button" class="btn btn-outline-light"><i class="bi bi-zoom-in"></i>
-            ITENS DISPONIBILIZADOS</button>
-            <button type="button" class="btn btn-outline-light"><i class="bi bi-currency-exchange"></i>VENDAS REALIZADAS
-            <i class="bi bi-currency-exchange"></i></button>
-            <button type="button" class="btn btn-outline-light"><i class="bi bi-chevron-compact-right" style="font-size: 1.0rem; 
+            <a href="#" button type="button" class="btn btn-outline-light"><i class="bi bi-zoom-in"></i>
+            ITENS DISPONIBILIZADOS</a>
+            <a href="#" button type="button" class="btn btn-outline-light"><i class="bi bi-currency-exchange"></i>VENDAS REALIZADAS
+            <i class="bi bi-currency-exchange"></i></a>
+            <a href="../vendedores/vendedores-formulario-inserir.php" button type="button" class="btn btn-outline-light"><i class="bi bi-chevron-compact-right" style="font-size: 1.0rem; 
             color: black;"></i>CADASTRAR ITENS<i class="bi bi-chevron-compact-left" style="font-size: 1.0rem; 
-            color: black;"></i></button>
-            <button type="button" class="btn btn-outline-light"><i class="bi bi-x-lg" style="font-size: 1.0rem;">
-            </i>EXCLUIR ITENS</button>
-            <button type="button" class="btn btn-outline-light"><i class="bi bi-wrench" style="font-size: 1.0rem;">
-            </i>ALTERAR ITENS</button>
-            <button type="button" class="btn btn-outline-light"><i class="bi bi-gear" style="font-size: 1.5rem; 
-            color: black;"></i></button>
+            color: black;"></i></a>
+            <a href="#" button type="button" class="btn btn-outline-light"><i class="bi bi-x-lg" style="font-size: 1.0rem;">
+            </i>EXCLUIR ITENS</a>
+            <a href="#" button type="button" class="btn btn-outline-light"><i class="bi bi-wrench" style="font-size: 1.0rem;">
+            </i>ALTERAR ITENS</a>
+            <a href="#" button type="button" class="btn btn-outline-light"><i class="bi bi-gear" style="font-size: 1.5rem; 
+            color: black;"></i></a>
               <form class="d-flex">
                 <input class="form-control me-6" type="search" placeholder="O que você deseja?" aria-label="Search">
                 <button class="btn btn-outline-dark" type="submit">Procurar</button>
