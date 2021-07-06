@@ -5,9 +5,24 @@ $campoInform = $_POST['campoInform'];
 $preco = $_POST['preco'];
 $campoPromocao = $_POST['campoPromocao'];
 $localProduto = $_POST['localProduto'];
-$imgProduto = $_POST['imgProduto'];
-$id_vendedor = $_POST['id_vendedor'];
 
+$dir = "imagens/";
+$imgProduto = $_FILES['imgProduto'];
+$foto = $dir . $imgProduto['name'];
+
+if(move_uploaded_file($imgProduto['tmp_name'] , "$dir/" . $imgProduto['name'])){
+    echo "Arquivo enviado com sucesso!";
+}else{
+    echo "Arquivo deu erro";
+}
+
+//caso queira ver para onde vai!!
+/*
+echo "($dir);";
+echo "($foto);";
+*/
+
+$id_vendedor = $_POST['id_vendedor'];
 
 include "../include/conexao.php";
 $sqlInserir = "INSERT INTO `tb_itens` (id, nome, campInform, preco, campoPromocao, localProduto, imgProduto, id_vendedor) 
@@ -18,7 +33,7 @@ VALUES (
     '{$preco}' ,
     '{$campoPromocao}' ,
     '{$localProduto}' ,
-    '{$imgProduto}', 
+    '{$foto}', 
     '{$id_vendedor}'
 );";
 
