@@ -3,7 +3,7 @@ include "../include/conexao.php";
 
 $id_itens = $_POST['id_itens'];
 $nome = $_POST['nome'];
-$campoInform = $_POST['campoInform'];
+$campoInform = $_POST['campInform'];
 $preco = $_POST['preco'];
 $campoPromocao = $_POST['campoPromocao'];
 $localProduto = $_POST['localProduto'];
@@ -33,10 +33,12 @@ $sqlAlterar = "UPDATE tb_itens SET
                 campoPromocao = '{$campoPromocao}' , 
                 localProduto = '{$localProduto}' ,
                 imgProduto = '{$foto}' ,
-                id_vendedor = '{$id_vendedor}' ,
+                id_vendedor = '{$id_vendedor}' 
                 WHERE id = {$id_itens}
                 ;";
-                
+            
+print_r($sqlAlterar);
+
 $resultado = mysqli_query($conexao, $sqlAlterar);
 
 if($resultado){

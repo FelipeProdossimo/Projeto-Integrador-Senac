@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<?php include "../include/conexao.php"
+<?php include "../include/conexao.php";
 
 $id_itens = $_GET['id'];
 
@@ -23,14 +23,14 @@ $nome = $campoInform = $preco = $campoPromocao = $localProduto = $imgProduto = $
 
 while($item = mysqli_fetch_assoc($listaDeItens)){
     $nome = $item['nome'];
-    $campoInform = $item['campoInform'];
+    $campoInform = $item['campInform'];
     $preco = $item['preco'];
     $campoPromocao = $item['campoPromocao'];
     $localProduto = $item['localProduto'];
     $imgProduto = $item['imgProduto'];
     $id_vendedor = $item['id_vendedor'];
 }
-?>?>
+?>
 
     <div class="container">
         <div class="row">
@@ -43,7 +43,7 @@ while($item = mysqli_fetch_assoc($listaDeItens)){
                     </div>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Informações do Item</label>
-                        <textarea class="form-control" name="campoInform" id="exampleFormControlTextarea1" rows="3" value="<?php echo $campoInform ; ?>"></textarea>
+                        <textarea class="form-control" name="campInform" id="exampleFormControlTextarea1" rows="3" value="<?php echo $campoInform ; ?>"></textarea>
                     </div>
                     <div class="col">
                         <label class="form-label">Preço:</label>
