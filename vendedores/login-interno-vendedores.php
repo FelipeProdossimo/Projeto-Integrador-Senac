@@ -7,7 +7,7 @@ echo "{$emailVendSistema} - {$senhaVendSistema}";
 
 include "../include/conexao.php";
 
-$sqlBusca = "SELECT * FROM tb_clientes WHERE email = '{$emailVendSistema}' and senha = '{$senhaVendSistema}'";
+$sqlBusca = "SELECT * FROM tb_vendedores WHERE email = '{$emailVendSistema}' and senha = '{$senhaVendSistema}'";
 
 $result = mysqli_query($conexao , $sqlBusca);
 

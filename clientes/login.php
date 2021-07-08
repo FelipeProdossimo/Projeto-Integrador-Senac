@@ -5,15 +5,15 @@ $senhaSistema = $_POST['senha'];
 
 echo "{$emailSistema} - {$senhaSistema}";
 
-include "include/conexao.php";
+include "../include/conexao.php";
 
 $sqlBusca = "SELECT * FROM tb_clientes WHERE email = '{$emailSistema}' and senha = '{$senhaSistema}'";
 
 $result = mysqli_query($conexao , $sqlBusca);
 
 if(mysqli_num_rows($result) > 0){
-   header('Location: clientes/pagina-clientes.php');
+   header('Location: pagina-clientes.php');
 }else{
-   header('Location: clientes/login-interno-clientes.php');
+   header('Location: login-interno-clientes.php');
 }
 ?>

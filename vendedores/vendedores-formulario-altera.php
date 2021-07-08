@@ -12,7 +12,9 @@
 </head>
 <body>
 
-<?php include "../include/conexao.php";
+<?php 
+include "../include/cabecalho-vendedores.php";
+include "../include/conexao.php";
 
 $id_itens = $_GET['id'];
 

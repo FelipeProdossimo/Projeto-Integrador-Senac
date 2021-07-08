@@ -12,7 +12,8 @@
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+  
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
         <div class="container-fluid">
           <nav class="navbar navbar-dark bg-info">
             <div class="container">
@@ -21,8 +22,8 @@
               </a>
             </div>
           </nav>
-            <button type="button" class="btn btn-outline-light">ITENS DISPONÍVEIS</button>
-            <button type="button" class="btn btn-outline-light">COMPRAS REALIZADAS</button>
+            <a href="../clientes/pagina-itens-clientes.php" button type="button" class="btn btn-outline-light">ITENS DISPONÍVEIS</a>
+            <a href="../clientes/pagina-compras-clientes.php" button type="button" class="btn btn-outline-light">COMPRAS REALIZADAS</a>
             <button type="button" class="btn btn-outline-light"><i class="bi bi-cart4" style="font-size: 1.5rem; 
             color: black;"></i></button>
             <button type="button" class="btn btn-outline-light"><i class="bi bi-gear" style="font-size: 1.5rem; 
@@ -35,52 +36,11 @@
         </div>   
       </nav>
 
-      <?php 
-      include "../include/conexao.php" ;
-      $sqlBusca = "SELECT * FROM tb_itens";
-                      
-
-      $listaDeItens = mysqli_query($conexao , $sqlBusca);
-      ?>
-
       <form>
-      <?php 
-
-      while($itens = mysqli_fetch_assoc($listaDeItens)){
-      echo "<div class='card'>";
-        echo "<div class='card-group'>";
-          echo "<div class='col-md-12'>";
-            echo "<img src='{$itens['imgProduto']}' class='img-fluid rounded-start' alt='...'>";
-          echo "</div'>";
-          echo "<div class='col-md-8'>";
-            echo "<div class='card-body'>";
-              echo "<h5 class='card-title'>{$itens['nome']}</h5>";
-              echo "<p class='card-text'>{$itens['campInform']}</p>";
-              echo "<p class='card-text'>{$itens['preco']}</p>";
-              echo "<p class='card-text'>{$itens['campoPromocao']}</p>";
-              echo "<p class='card-text'>{$itens['localProduto']}</p>";
-              echo "<p class='card-text'><small class='text-muted'>Last updated 3 mins ago</small></p>";
-              echo "<p class='card-text'>{$itens['id_vendedor']}</p>";
-
-            echo "</div>";
-          echo "</div>";
-        echo "</div>";
-      echo "</div>";
-      };
-      ?>
-
-      <!--
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              </div>
-            </div>
-          </div>
+      <div class="card text-center">
+        <div class="card-header">
+            Notícias
         </div>
-      
         <div class="card-body">
             <h5 class="card-title">SITE EM CONSTRUÇÃO</h5>
             <p class="card-text">Peço sua colaboração, entraremos em contato assim que retornar. Equipe SEA Agradece!</p>
@@ -91,6 +51,5 @@
         </div>
         </div>
       </form>
-      -->
 </body>
 </html>
