@@ -1,6 +1,6 @@
 <?php 
 
-include "include/conexao.php";
+include "../include/conexao.php";
 
 //error_reporting(0);
 
@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
                 );";
         $result = mysqli_query($conexao, $sqlBusca);
         if ($result) {
-            header('Location:clientes/login-interno-clientes.php');
+            header('Location:login-interno-clientes.php');
             echo "<script>alert('Usuario registrado sucesso!')</script>";  
             $nome = "";
             $email = "";
@@ -114,7 +114,8 @@ if (isset($_POST['submit'])) {
             <div class="text-center">
                 <label>
                     <p class="login-register-text">Já tem conta? Faça
-                    <a href="index.php" class="text-decoration-none text-info">login</a> agora!</p>
+                    <a href="login-interno-clientes.php" class="text-decoration-none text-info">
+                    login</a> agora!</p>
                 </label>
             </div>
             <div class="d-grid gap-2 col-6 mx-auto">
