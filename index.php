@@ -34,7 +34,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><strong>SeaComp</strong></a>
+      <a class="navbar-brand" href="#"><strong>SeaCompany</strong></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -59,7 +59,7 @@
       <div class="align-self-end">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-lightning-fill">
+            <a class="nav-link" href="rede-funcionarios.php"><i class="bi bi-lightning-fill">
             </i>SOU FUNCIONÁRIO</a>
           </li>
           <li class="nav-item">
@@ -72,27 +72,32 @@
   </nav>
 <header class="container">
   <div id="carouselMain" class="carousel carousel-dark slide" data-ride="carousel">
-  <ol class="carousel-indicators">
-    <li data-target="#carouselMain" data-slide-to="0" class="active"></li>
-    <li data-target="#carouselMain" data-slide-to="1" class="active"></li>
-    <li data-target="#carouselMain" data-slide-to="2" class="active"></li>
-  </ol>  
-  <div class="carousel-inner">
-      <div class="carousel-item active text-center" data-interval="3000">
-        <img src="img/slide01.jpg" alt="First slide" class="img-fluid d-none d-md-block">
-        <img src="img/slide01small.jpg" alt="Second slide" class="img-fluid d-block d-md-none">
-      </div>
-      <div class="carousel-item text-center" data-interval="3000">
-        <img src="img/slide01.jpg" alt="First slide" class="img-fluid d-none d-md-block">
-        <img src="img/slide01small.jpg" alt="First slide" class="img-fluid d-block d-md-none">
-      </div>
-      <div class="carousel-item text-center" data-interval="3000">
-        <img src="img/slide01.jpg" alt="First slide" class="img-fluid d-none d-md-block">
-        <img src="img/slide01small.jpg" alt="First slide" class="img-fluid d-block d-md-none">
-      </div>
-
+    <ol class="carousel-indicators">
+      <li data-target="#carouselMain" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselMain" data-slide-to="1" class="active"></li>
+      <li data-target="#carouselMain" data-slide-to="2" class="active"></li>
+    </ol>  
+    <div class="carousel-inner">
+        <div class="carousel-item active text-center" data-interval="3500">
+          <img src="img/banner-s.gif" alt="First slide" class="img-fluid d-none d-md-inline-block">
+          <img src="img/banner-02.gif" alt="Second slide" class="img-fluid d-block d-md-none">
+        </div>
+        <div class="carousel-item text-center" data-interval="3500">
+          <img src="img/banner-02.gif" alt="First slide" class="img-fluid d-none d-md-inline-block">
+          <img src="img/banner-s.gif" alt="First slide" class="img-fluid d-block d-md-none">
+        </div>
+        <div class="carousel-item text-center" data-interval="4000">
+          <img src="img/banner-02.gif" alt="First slide" class="img-fluid d-none d-md-inline-block">
+          <img src="img/banner-s.gif" alt="First slide" class="img-fluid d-block d-md-none">
+        </div>
+    </div>
   </div>
+
+  
 </header>
+
+
+
 <footer class="border-top fixed-bottom text-muted bg-light">
   <div class="container">
     <div class="row py-3">
@@ -101,6 +106,8 @@
       </div>
       <div class="col-12 col-md-4 text-center">
         <a href="#" class="text-decoration-none">Política de Privacidade</a>
+        <a href="#" class="text-decoration-none">Trocas e Devoluções</a>
+        <a href="#" class="text-decoration-none"></a>
       </div>
       <div class="col-12 col-md-4 text-center text-md-right">
         <a href="#" class="text-decoration-none">Termos e responsabilidades</a>
