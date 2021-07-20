@@ -34,12 +34,19 @@
 
 <div class="container">
     <div class ="row align-items-center mt-5">
-        <a button type="button" href="../Projeto-Integrador-Senac/index.php" 
-        class="btn btn-outline-primary mt-5 mr-4"><i class="bi bi-arrow-left-square"></i></a>
-        <a button type="button" href="../Projeto-Integrador-Senac/vendedores/login-vendedores.php" 
-        class="btn btn-outline-danger mt-5">VENDEDORES</a>
-        <a button type="button" href="../Projeto-Integrador-Senac/atendentes/login-atendentes.php" 
-        class="btn btn-outline-warning mt-5">ATENDENTES</a>
+        <div class="col-6">
+            <div class="position-relative">
+                <div class="position-absolute top-0 start-0 translate-middle">
+                    <a button type="button" href="../Projeto-Integrador-Senac/index.php" 
+                    class="btn btn-outline-primary mt-5 mr-4  shadow-lg p-3 mb-5 bg-body rounded">
+                    <i class="bi bi-arrow-left-square-fill"></i></a>
+                </div>
+            </div>
+        </div>
+            <a button type="button" href="../Projeto-Integrador-Senac/vendedores/login-vendedores.php" 
+            class="btn btn-outline-danger mt-5 shadow-lg p-3 mb-5 bg-body rounded"><b>VENDEDORES</b></a>
+            <a button type="button" href="../Projeto-Integrador-Senac/atendentes/login-atendentes.php" 
+            class="btn btn-outline-warning mt-5 shadow-lg p-3 mb-5 bg-body rounded"><b>ATENDENTES</b></a>
     </div>
 </div>
 </body>
