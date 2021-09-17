@@ -2,15 +2,14 @@
 include "../include/cabecalho-vendedores.php";
 
       include "../include/conexao.php" ;
-      $sqlBusca = "SELECT tb_itens.imgProduto,
-      tb_itens.preco,
-      tb_itens.campoPromocao,
-      tb_itens.nome,
-      tb_itens,campInform,
-      tb_itens,localProduto
-      tb_vendedores.nome as id_vendedor
-      from tb_itens
-      inner join tb_vendedores on tb_itens.id = tb_vendedores.id
+      $sqlBusca = "SELECT tb_itens.imgProduto, 
+      tb_itens.preco, 
+      tb_itens.campoPromocao, 
+      tb_itens.nome, 
+      tb_itens.campInform, 
+      tb_itens.localProduto, 
+      tb_vendedores.nome as id_vendedor 
+      from tb_itens inner join tb_vendedores on tb_itens.id = tb_vendedores.id
       ";
                       
 
@@ -23,7 +22,8 @@ include "../include/cabecalho-vendedores.php";
     <?php 
       while($itens = mysqli_fetch_assoc($listaDeItens)){
       
-      /*  
+      /* 
+
 
       echo "<div class='card-group'>";
         echo "<div class='card'>";
@@ -60,7 +60,7 @@ include "../include/cabecalho-vendedores.php";
                       echo "<div class='input-group input-group-sm'>";
                         echo "<input type='text' class='form-control' placegolder='Digite aqui o que procura'>";
                         echo "<button class='btn btn-danger'>";
-                          echo "Buscar"; //
+                          echo "Buscar";
                         echo "</button>";
                       echo "</div>";
                     echo "</form>";
@@ -124,9 +124,9 @@ include "../include/cabecalho-vendedores.php";
                       echo "<small class='text-success'>{$itens['localProduto']}</small>";
                       echo "<br>";
                       echo "<small class='text-success'>{$itens['id_vendedor']}</small>";
-                      echo "<a href='../itens/excluir-itens.php?id={$itens['id']}'button type='button' class='btn btn-outline-warning'>
+                      echo "<a href='../itens/excluir-itens.php?id={$itens['id']}' type='button' class='btn btn-outline-warning'>
                       <i class='bi bi-x-lg' style='font-size: 0.7rem;'></i>Excluir</a></td> | ";
-                      echo "<a href='../vendedores/vendedores-formulario-altera.php?id={$itens['id']}'button type= 'button' 
+                      echo "<a href='../vendedores/vendedores-formulario-altera.php?id={$itens['id']}' type= 'button' 
                       class='btn btn-outline-success'><i class='bi bi-wrench' style='font-size: 0.7rem;'>
                       </i>Alterar</a></td>";
                     echo "</div>";

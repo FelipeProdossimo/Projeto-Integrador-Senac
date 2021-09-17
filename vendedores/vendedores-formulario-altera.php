@@ -18,7 +18,7 @@ include "../include/conexao.php";
 
 $id_itens = $_GET['id'];
 
-$sqlBusca = "SELECT * FROM tb_itens WHERE id = {$id_itens}";
+$sqlBusca = "SELECT * FROM tb_itens";
 $listaDeItens = mysqli_query($conexao , $sqlBusca);
 
 $nome = $campoInform = $preco = $campoPromocao = $localProduto = $imgProduto = $id_vendedor = "";
